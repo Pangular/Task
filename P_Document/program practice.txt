@@ -1,0 +1,268 @@
+// const a="aabaa"
+// let add= a.split('').reverse().join('')
+// if(a==add){
+//     console.log("Palindrom")
+// }
+// else{
+//     console.log("Not Palindrom")
+// }
+
+//  let arr=[2,4,1,2,3,5,9]
+// let arr=["a","c","a","r","e","c"]
+// const arr="pratibhahasdskkk Deshmukhuweeeee"
+// let a=([...new Set(arr)])
+// console.log(a)
+
+//Fibonancci series
+// let number=10
+// let n1=0,n2=1,next
+// let printfibo=()=>{
+//     for(let i=0;i<=number;i++){
+//         console.log(n1)
+//         next=n1+n2
+//         n1=n2
+
+//         n2=next
+//     }
+// }
+// printfibo()
+
+ //swapping a=10,b=5
+// let a=10
+// let b=5
+// let temp
+
+// temp=a  // temp=a=10
+// a=b      //a=b=5
+// b=temp  //b=temp=10
+// console.log(a)
+// console.log(b)
+
+//array empty 
+// let arr=[2,4,1,2,3,5,9]
+// arr=[]
+// console.log(arr)
+// arr.length=0
+//  arr.splice(0,arr.length)
+// while(arr.length){
+//     arr.pop()
+// }
+
+//number is integer
+// Number.isInteger(123);
+
+// let arr=[]
+// console.log(Math.max(2,4,1,2,3,5,9))
+// console.log(Math.min(2,4,1,2,3,5,9))
+
+//"I": 1,
+  "n": 1,
+  "d": 1,
+  "i": 6,
+  "v": 1,
+  "s": 2,
+  "b": 1,
+  "l": 1,
+  "t": 1,
+  "e": 1
+function getFrequency(string) {
+var freq = {};
+for (var i=0; i<string.length;i++) {
+    var character = string.charAt(i);
+    if (freq[character]) {
+       freq[character]++;
+    } else {
+       freq[character] = 1;
+    }
+}
+
+return freq;
+};
+
+console.log(getFrequency('Indivisibilities'))
+===================================================================================================================
+[8:45 pm, 27/11/2022] Manoj Munda vAngu: find max and 2nd max number
+function findSecondLargestElem(arr){
+    let first = -1 , second = -1;
+
+for(let i = 0; i < arr.length; i++){
+        if(arr[i] > first){
+          second=first
+            first = arr[i];
+        }
+        else if( arr[i] > second && arr[i] != first){
+            second = arr[i];
+        }
+    }
+    console.log(second);
+}
+let arr = [12, 35, 1, 100, 34, 1]
+findSecondLargestElem(arr);
+
+
+repeated number
+const a = [4,3,6,3,4,3]
+
+function count_duplicate(a){
+ let counts = {}
+
+ for(let i =0; i < a.length; i++){
+     if (counts[a[i]]){
+     counts[a[i]] += 1
+     } else {
+     counts[a[i]] = 1
+     }
+    }  
+  console.log(counts)
+}
+
+count_duplicate(a)
+
+
+sorting
+let arr=[4,2,5,1]
+let temp;
+
+function converter(arr){
+
+for(let i=0;i<arr.leng…
+[8:45 pm, 27/11/2022] Manoj Munda vAngu: Input:
+S = "geeksforgeeks"
+Output: g
+Explanation: g, e, k and s are the repeating
+characters. Out of these, g occurs first.
+const repeatedCharacter = (str) => {
+  for (let i = 0; i < str.length - 1; i++) {
+    for (let j = i + 1; j < str.length; j++) {
+      if (str[i] === str[j]) {
+        return str[i];
+      }
+    }
+  }
+  return -1
+};
+console.log(repeatedCharacter("geeksforgeeks"));
+[8:45 pm, 27/11/2022] Manoj Munda vAngu: Javascript: 
+
+
+
+console.log("first"); 
+
+setTimeout(function() {
+
+    console.log("second"); 
+
+},0);
+
+console.log("third"); 
+
+First
+
+Third
+
+Second
+
+⇐============================>
+
+
+for(var i =0; i < 3; i++){
+
+	(funcion(x){
+
+setTimeout(function() {
+
+    console.log(x); 
+
+},0);
+
+
+})(i)
+
+}
+
+⇐=====================>
+
+console.log("first");
+
+setTimeout(function() {
+
+    console.log("second"); 
+
+},10000);
+
+
+
+console.log("third"); 
+
+
+First 
+
+after 10sec sercond 
+
+Third
+
+⇐========================>
+
+console.log(a);
+
+console.log(b);
+
+var a = 10;
+
+let b = 20;
+
+Undefined
+
+Undefined
+
+
+⇐========================>
+
+var a = 10;
+
+let fn = ()=>{
+
+console.log(a);
+	var a = 40
+}
+
+fn();
+
+
+
+
+
+
+let a = 40;
+
+let obj = {
+
+	a: 10,
+
+	b: function(){ console.log(this.a)},
+
+	c: ()=>{console.l…
+[8:46 pm, 27/11/2022] Manoj Munda vAngu: Reverse string , palindrome aur vowel ka bhi karo program
+
+=================
+let str='pratibha deshmukh angular'
+
+let reverseWordArr = str.split(" ").map(word => word.split("").reverse().join(""));
+console.log(reverseWordArr)
+=========================================
+//op-Best is javascript
+
+//sample string
+     let str1 = "Javascript is Best";
+//breaking into array
+     let str1WordArr = str1.split(" ");
+//temp array to hold the reverse string      
+      let reverseWord=[];
+//can iterate the loop backward      
+     for(let i=(str1WordArr.length)-1;i>=0;i--)
+     {
+//pushing the reverse of words into new array
+          reverseWord.push(str1WordArr[i]); 
+     }
+//join the words array 
+      console.log(reverseWord.join(" "))
